@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Mahdi';
+const name = 'My name';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <>
+          <div>
             <Image
               priority
               src="/images/index.jpg"
@@ -37,9 +37,9 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
+          </div>
         ) : (
-          <>
+          <div>
             <Link href="/">
               <a>
                 <Image
@@ -57,7 +57,7 @@ export default function Layout({ children, home }) {
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
             </h2>
-          </>
+          </div>
         )}
       </header>
       <main>{children}</main>
