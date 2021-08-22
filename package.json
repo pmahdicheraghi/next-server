@@ -16,7 +16,10 @@
     "swr": "^0.5.6"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.2",
     "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-next": "11.0.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
   }
 }

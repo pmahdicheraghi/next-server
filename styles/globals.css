@@ -1,4 +1,26 @@
-﻿/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+﻿/* tailwind.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: Titr;
+	src: url("../assets/fonts/B_Titr.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: Mitra;
+	src: url("../assets/fonts/B_Mitra.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: Homa;
+	src: url("../assets/fonts/B_Homa.ttf") format("truetype");
+}
+
+
+/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 
 html {
 	box-sizing: border-box
