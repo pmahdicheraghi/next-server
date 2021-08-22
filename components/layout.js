@@ -5,7 +5,7 @@ import useSWR from "swr";
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
-  const { data, error } = useSWR('/api/desiner', (url) => fetch(url).then((res) => res.json()));
+  const { data, error } = useSWR('/api/designer', (url) => fetch(url).then((res) => res.json()));
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
 
