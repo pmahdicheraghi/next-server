@@ -1,5 +1,5 @@
-import fetchJson from '../../lib/fetchJson'
-import withSession from '../../lib/session'
+import fetchJson from '../../library/fetchJson'
+import withSession from '../../library/session'
 
 export default withSession(async (req, res) => {
   const { username } = await req.body

@@ -10,7 +10,7 @@ export default function Navbar() {
   const router = useRouter();
   return (
     <nav className="w-full bg-gray-600 flex flex-wrap mx-auto sticky top-0">
-      <div className="container mx-auto px-3">
+      <div className="w-full mx-auto px-3">
         <div className="text-white h-full px-2 py-2 float-right hover:bg-white hover:text-black font-homa text-xl">
           <Link href="/">
             <a>
