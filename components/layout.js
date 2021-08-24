@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image'
 import Link from 'next/link';
 import Navbar from './navbar';
 import swr from "swr";
 
+const name = "کانون فرهنگی هنری مسجد چهارده معصوم";
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
@@ -17,9 +19,14 @@ export default function Layout({ children, home }) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <header class="">
-        <h1 class="">کانون فرهنگی هنری مسجد چهارده معصوم</h1>
-        <p class="">desined by {data.name}</p>
+      <header className="">
+        <Image
+          src="/images/top.jpg"
+          height={400}
+          width={1200}
+          layout="responsive"
+          alt={name}
+        />
       </header>
       <Navbar />
       <main>{children}</main>
