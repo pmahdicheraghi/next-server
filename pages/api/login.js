@@ -1,19 +1,16 @@
-import fetchJson from '../../library/fetchJson'
-import withSession from '../../library/session'
+import withSession from '../../library/session';
 
 export default withSession(async (req, res) => {
-  const { username } = await req.body
-  const url = `https://api.github.com/users/${username}`
+  const username = await req.body.username;
+  const password = await req.body.password;
 
-  try {
-    // we check that the user exists on GitHub and store some data in session
-    const { login, avatar_url: avatarUrl } = await fetchJson(url)
-    const user = { isLoggedIn: true, login, avatarUrl }
-    req.session.set('user', user)
-    await req.session.save()
-    res.json(user)
-  } catch (error) {
-    const { response: fetchResponse } = error
-    res.status(fetchResponse?.status || 500).json(error.data)
+  if (username == "mahdi" && password == "32935580") {
+    const user = { isLoggedIn: true, username };
+    req.session.set('user', user);
+    await req.session.save();
+    res.status(200).json({ valid: true, user });
   }
-})
+  else {
+    res.json({ valid: false, message: "not found" });
+  }
+});

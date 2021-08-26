@@ -2,12 +2,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useUser from '../library/useUser';
-import fetchJson from '../library/fetchJson';
-import { useRouter } from 'next/router';
 
 export default function Navbar() {
-  const { user, mutateUser } = useUser();
-  const router = useRouter();
+  const { user } = useUser();
+
   return (
     <nav className="w-full bg-gray-600 flex flex-wrap mx-auto sticky top-0">
       <div className="w-full mx-auto px-3">
@@ -25,7 +23,6 @@ export default function Navbar() {
             </a>
           </Link>
         </div>
-        <FontAwesomeIcon icon="fa-solid fa-clock" />
         <div className="text-white h-full px-2 py-2 float-right hover:bg-white hover:text-black font-homa text-xl">
           <Link href="/aboutus">
             <a>
