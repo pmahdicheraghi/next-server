@@ -18,6 +18,14 @@
 	font-family: Homa;
 	src: url("../assets/fonts/B_Homa.ttf") format("truetype");
 }
+@font-face {
+	font-family: Yekan;
+	src: url("../assets/fonts/Yekan.ttf") format("truetype");
+}
+@font-face {
+	font-family: Bahman;
+	src: url("../assets/fonts/Bahman.ttf") format("truetype");
+}
 
 
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */

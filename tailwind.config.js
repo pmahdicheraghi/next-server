@@ -7,6 +7,8 @@ module.exports = {
         mitra: ["Mitra", "sens"],
         titr: ["Titr", "sens"],
         homa: ["Homa", "sens"],
+        yekan: ["Yekan", "sens"],
+        bahman: ["Bahman", "sens"],
       }
     },
   },

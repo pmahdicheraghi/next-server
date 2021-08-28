@@ -2,6 +2,7 @@ import fetchJson from "../library/fetchJson";
 import Link from "next/link";
 import useUser from '../library/useUser';
 import Router from "next/router";
+import Image from "next/image"
 
 // layout for page
 
@@ -35,70 +36,65 @@ export default function Login() {
 
   return (
     <div className="relative w-full h-full py-40 min-h-screen">
-      <div
-        className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
-        style={{
-          backgroundImage: "url('/images/register_bg_2.png')",
-        }}
-      ></div>
+      <Image
+        src="/images/log_back.jpg"
+        layout="fill"
+        objectFit="cover"
+        quality={100} 
+      />
       <div className="container mx-auto px-4 h-full">
         <div className="flex content-center items-center justify-center h-full">
           <div className="w-full lg:w-4/12 px-4">
-            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
-              <div className="text-center">
-                <h2>
-                  Login
-                </h2>
-              </div>
+            <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white bg-opacity-40 border-0 pt-10">
               <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="text-right">
                   <div className="relative w-full mb-3">
                     <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      className="block uppercase text-blueGray-600 text-sm font-yekan mb-2"
                       htmlFor="grid-password"
                     >
-                      Username
+                      نام کاربری
                     </label>
                     <input
                       name="username"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="Username"
+                      className="border-0 px-3 py-3 placeholder-gray-400 text-black font-yekan bg-opacity-80 bg-white text-right rounded-md text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                      placeholder="نام کاربری"
                     />
                   </div>
 
                   <div className="relative w-full mb-3">
                     <label
-                      className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                      className="block uppercase text-blueGray-600 text-sm font-yekan mb-2"
                       htmlFor="grid-password"
                     >
-                      Password
+                      گذرواژه
                     </label>
                     <input
                       type="password"
                       name="password"
-                      className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      placeholder="Password"
+                      className="border-0 px-3 py-3 placeholder-gray-400 text-black font-yekan bg-opacity-80 bg-white text-right rounded-md text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                      placeholder="گذرواژه"
                     />
                   </div>
                   <div>
                     <label className="inline-flex items-center cursor-pointer">
                       <input
-                        id="customCheckLogin"
+                        name="rememeberMe"
                         type="checkbox"
                         className="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"
                       />
-                      <span className="ml-2 text-sm font-semibold text-blueGray-600">
-                        Remember me
+                      <span className="ml-2 text-sm text-blueGray-600 font-yekan">
+                        مرا به خاطر بسپار
                       </span>
                     </label>
                   </div>
 
                   <div className="text-center mt-6">
                     <button
-                      className="bg-blueGray-800 active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                      className="bg-blue-50 bg-opacity-90 text-3xl font-yekan font uppercase px-6 pb-4 pt-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="submit"
                     >
-                      Sign In
+                      ورود
                     </button>
                   </div>
                 </form>
@@ -109,15 +105,15 @@ export default function Login() {
                 <a
                   href="#pablo"
                   onClick={(e) => e.preventDefault()}
-                  className="text-blueGray-200"
+                  className="font-mitra text-lg text-black bg-white bg-opacity-50 px-2 py-1 rounded-md hover:shadow-xl"
                 >
-                  <small>Forgot password?</small>
+                  <small>فراموشی گذرواژه</small>
                 </a>
               </div>
               <div className="w-1/2 text-right">
-                <Link href="/auth/register">
-                  <a href="#pablo" className="text-blueGray-200">
-                    <small>Create new account</small>
+                <Link href="/register">
+                  <a className="font-mitra text-lg text-black bg-white bg-opacity-50 px-2 py-1 rounded-md hover:shadow-xl">
+                    <small>ساخت حساب کاربری</small>
                   </a>
                 </Link>
               </div>
